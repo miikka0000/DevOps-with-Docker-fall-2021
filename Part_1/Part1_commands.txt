@@ -58,7 +58,7 @@ CMD server
 1.8: Image for script
 
 
-docker run -it --name looper4 curl 
+docker run -it curl 
 
 
 
