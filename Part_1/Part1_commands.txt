@@ -47,7 +47,10 @@ SECRET MESSAGE: "This is the secret message"
 
 1.7: Two line Dockerfile
 
+# My Docker file for the exercise 1.7: Two line Dockerfile. Done by Miikka Mensio
 
+FROM devopsdockeruh/simple-web-service:alpine
+CMD server
 
 
 
@@ -55,7 +58,7 @@ SECRET MESSAGE: "This is the secret message"
 1.8: Image for script
 
 
-
+docker run -it --name looper4 curl 
 
 
 
