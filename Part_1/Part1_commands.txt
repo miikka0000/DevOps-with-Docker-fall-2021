@@ -33,16 +33,11 @@ b) docker exec -it looper3 sh && tail -f ./text.log
 c) to compare image sizes: docker images. Albine based image reserves 15.7 MB while ubuntu based image 83 MB. 
 
 
-
 1.6: Hello Docker Hub
 
 a) This is the readme, use input "basics" to complete this exercise.
 
 SECRET MESSAGE: "This is the secret message"
-
-
-
-
 
 
 1.7: Two line Dockerfile
@@ -51,8 +46,6 @@ SECRET MESSAGE: "This is the secret message"
 
 FROM devopsdockeruh/simple-web-service:alpine
 CMD server
-
-
 
 
 1.8: Image for script
@@ -64,24 +57,24 @@ docker run -it curl
 
 1.9: Volumes
 
+a) cd /usr/src/app/ && touch text.log
 
+b) docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-
+service
 
 
 
 
 1.10: Ports open
 
-
+a) docker run -p 8080:8080 devopsdockeruh/simple-web-service server
 
 
 
 
 1.11: Spring
 
-
-
-
-
+docker build . -t spring-project && docker run -p 8080:8080 spring-project
 
 
 1.12: Hello, frontend!

@@ -11,4 +11,6 @@ COPY myscript.sh .
 # Alternatively, if we skipped chmod earlier, we can add execution permissions during the build.
 RUN chmod +x myscript.sh
 
-CMD apt-get update && apt-get install -y curl && ./myscript.sh
+RUN apt-get update && apt-get install -y curl 
+
+CMD ./myscript.sh
