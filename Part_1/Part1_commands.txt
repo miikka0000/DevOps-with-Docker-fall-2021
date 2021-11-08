@@ -1,3 +1,5 @@
+# Commands for exercises 1.1 - 1.11
+
 1.1: Getting started
 
 a) docker run -d nginx && docker run -d redix && docker run -d wordpress
@@ -76,16 +78,3 @@ a) docker run -p 8080:8080 devopsdockeruh/simple-web-service server
 
 docker build . -t spring-project && docker run -p 8080:8080 spring-project
 
-
-1.12: Hello, frontend!
-
-
-
-
-
-1.13: Hello, backend!
-
-
-
-
-1.14: Environment

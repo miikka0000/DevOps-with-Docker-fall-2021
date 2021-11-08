@@ -1,0 +1,5 @@
+1.5: Sizes of images
+
+a) docker run -it --name looper3 devopsdockeruh/simple-web-service:alpine
+b) docker exec -it looper3 sh && tail -f ./text.log
+c) to compare image sizes: docker images. Albine based image reserves 15.7 MB while ubuntu based image 83 MB. 
