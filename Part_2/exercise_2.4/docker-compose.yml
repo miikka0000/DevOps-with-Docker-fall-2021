@@ -1,0 +1,22 @@
+# Docker-compose.yml file for exercise 2.4
+
+
+
+version: '3'
+
+services:
+        applicationBackend:
+            image: example-backend
+            environment:
+                - REDIS_HOST =6379
+            ports:
+                - 8000:8000
+        applicationFrontend:
+            image: example-frontend
+            ports:
+                - 5000:5000
+        redis:
+            image: redis
+            ports:
+                - 6379:6379
+
