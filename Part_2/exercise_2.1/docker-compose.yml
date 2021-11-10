@@ -1,0 +1,11 @@
+# Docker-compose.yml file for exercise 2.1
+version: '3.5'
+
+services:
+
+    simple-web-service:
+      image: devopsdockeruh/simple-web-service
+      build: .
+      volumes:
+        - ./text.log:/usr/src/app/text.log
+      container_name: simple-web-service

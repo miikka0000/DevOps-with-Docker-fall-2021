@@ -1,0 +1,16 @@
+# Docker-compose.yml file for exercise 2.3
+
+
+
+version: '3'
+
+services:
+        applicationBackend:
+            image: example-backend
+            ports:
+                - 8000:8000
+        applicationFrontend:
+            image: example-frontend
+            ports:
+                - 5000:5000
+
