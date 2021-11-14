@@ -1,0 +1,41 @@
+# Docker-compose.yml file for exercise 2.7
+
+version: '3'
+
+services:
+        machine_learning_backend:
+            container_name: backend1
+            build: ./ml-kurkkumopo-backend
+
+            volumes:
+
+                - model:/src/model
+
+            depends_on:
+                - machine_learning_training
+
+
+            ports:
+                - 5000:5000
+
+        machine_learning_frontend:
+            container_name: frontend1
+            build: ./ml-kurkkumopo-frontend
+
+
+            ports:
+                - 3000:3000
+
+        machine_learning_training:
+            container_name: training
+            build: ./ml-kurkkumopo-training
+            volumes:
+                - model:/src/model
+                - images:/src/imgs
+                - data:/src/data
+
+
+volumes:
+    model:
+    images:
+    data:

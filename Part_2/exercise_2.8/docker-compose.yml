@@ -1,0 +1,62 @@
+# Docker-compose.yml file for exercise 2.8                                                                
+version: '3'
+
+services:
+        applicationBackend:
+            image: example-backend
+            build: ./material-applications/example-backend
+            environment:
+                REDIS_HOST: redis
+
+                POSTGRES_HOST: postgres
+               
+                POSTGRES_DATABASE: postgres
+
+                POSTGRES_USER: postgres
+                
+                POSTGRES_PASSWORD: postgres
+
+                REQUEST_ORIGIN: http://localhost:80
+
+            depends_on:
+                - redis
+                - postgres
+
+            ports:
+                - 8080:8080
+
+        applicationFrontend:
+            image: example-frontend
+            build: ./material-applications/example-frontend
+            environment: 
+                REACT_APP_BACKEND_URL: http://localhost:80
+
+        postgres:
+            container_name: postgres
+            image: postgres
+            environment:
+              
+                POSTGRES_HOST: postgres
+               
+                POSTGRES_DATABASE: postgres
+
+                POSTGRES_USER: postgres
+                POSTGRES_PASSWORD: postgres
+                
+        redis:
+            image: redis
+            restart: unless-stopped
+
+        nginx:
+
+            
+            image: nginx
+            
+            ports:
+                - 80:80
+
+            volumes:
+                - ./nginx.config:/etc/nginx/nginx.conf
+
+
+                
