@@ -1,0 +1,11 @@
+# Docker-compose.yml file for exercise 2.11
+
+version: '3'
+
+services:
+        pythonproject:
+            build: .
+            image: pythonproject
+            # enabling interactive connection
+            stdin_open: true
+            tty: true

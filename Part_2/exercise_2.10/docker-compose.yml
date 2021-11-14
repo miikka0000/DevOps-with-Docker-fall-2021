@@ -1,0 +1,67 @@
+# Docker-compose.yml file                                                              
+version: '3'
+
+services:
+        applicationBackend:
+            image: example-backend
+            build: ./material-applications/example-backend
+            environment:
+                REDIS_HOST: redis
+
+                POSTGRES_HOST: postgresHost
+               
+                POSTGRES_DATABASE: postgresDB
+
+                POSTGRES_USER: user1234
+                
+                POSTGRES_PASSWORD: user1234
+
+                REQUEST_ORIGIN: http://localhost:80
+
+            depends_on:
+                - redis
+                - postgres
+
+            ports:
+                - 8080:8080
+
+        applicationFrontend:
+            image: example-frontend
+            build: ./material-applications/example-frontend
+            environment: 
+                REACT_APP_BACKEND_URL: http://localhost:80
+
+        postgres:
+            container_name: postgres
+            image: postgres
+            environment:
+              
+                POSTGRES_HOST: postgresHost
+               
+                POSTGRES_DATABASE: postgresDB
+
+                POSTGRES_USER: user1234
+                
+                POSTGRES_PASSWORD: user1234
+
+            volumes:
+                - ./database:/var/lib/postgresql/data
+                
+        redis:
+            image: redis
+            restart: unless-stopped
+            volumes:
+            - ./redis:/data
+
+        nginx:
+           
+            image: nginx
+            
+            ports:
+                - 80:80
+
+            volumes:
+                - ./nginx.config:/etc/nginx/nginx.conf
+
+
+                
