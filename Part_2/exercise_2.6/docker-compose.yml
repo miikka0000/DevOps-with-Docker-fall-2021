@@ -11,13 +11,13 @@ services:
             environment:
                 REDIS_HOST: redis
 
-                POSTGRES_HOST: postgres
+                POSTGRES_HOST: postgresHost
                
-                POSTGRES_DATABASE: postgres
+                POSTGRES_DATABASE: postgresDB
 
-                POSTGRES_USER: postgres
+                POSTGRES_USER: user1234
                 
-                POSTGRES_PASSWORD: postgres
+                POSTGRES_PASSWORD: user1234
 
             depends_on:
                 - redis
@@ -33,17 +33,23 @@ services:
                 - 5000:5000
 
         postgres:
+        
             container_name: postgres
+
             image: postgres
+
             environment:
               
-                POSTGRES_HOST: postgres
+                POSTGRES_HOST: postgresHost
                
-                POSTGRES_DATABASE: postgres
+                POSTGRES_DATABASE: postgresDB
 
-                POSTGRES_USER: postgres
-                POSTGRES_PASSWORD: postgres
+                POSTGRES_USER: user1234
+
+                POSTGRES_PASSWORD: user1234
                 
         redis:
+
             image: redis
+
             restart: unless-stopped

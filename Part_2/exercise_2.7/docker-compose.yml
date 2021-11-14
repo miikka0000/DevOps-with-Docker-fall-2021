@@ -27,6 +27,7 @@ services:
                 - 3000:3000
 
         machine_learning_training:
+        
             container_name: training
             build: ./ml-kurkkumopo-training
             volumes:
