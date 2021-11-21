@@ -4,7 +4,7 @@
 # Dockerfile for backend (exercise 3.4)
 
 
-FROM ubuntu:latest
+FROM ubuntu:18.04
 
 
 WORKDIR /usr/src/app

@@ -6,4 +6,4 @@ Size after optimization: 421 MB <br />
 
 ## <b>example-backend</b>  
 Size before optimization: 911 MB  <br />
-Size after optimization: <br />
+Size after optimization: 889 MB <br />
