@@ -1,10 +1,5 @@
 # command used:  docker build ./ -t example-backend && docker run -p 8080:8080 example-backend
-
-# then navigated in browser to: localhost:8080
-# and received: pong
-
-
-# Dockerfile
+# Dockerfile for backend
 
 
 FROM ubuntu:latest
@@ -29,4 +24,9 @@ ENV PATH=$PATH:/usr/local/go/bin
 RUN go version
 RUN go build
 RUN go test ./...
+
+RUN useradd -m appuser
+
+USER appuser
+
 CMD ./server
