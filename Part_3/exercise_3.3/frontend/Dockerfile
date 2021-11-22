@@ -1,4 +1,4 @@
-# Dockerfile for frontend
+# Dockerfile for frontend for exercise 3.3
 # Command used to build and run the container: docker build ./ -t example-frontend && docker run -p 5000:5000 example-frontend
 
 FROM ubuntu:latest

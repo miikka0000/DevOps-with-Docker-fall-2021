@@ -24,7 +24,6 @@ RUN go version \
 && rm -rf /var/lib/apt/lists/* \
 && useradd -m appuser
 
-
 USER appuser
 
 EXPOSE 8080:8080

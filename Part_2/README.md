@@ -64,16 +64,14 @@
 
 ## Exercise 2.11: Simple Dockerized python program for exercise 2.11
 
-### Answers:
+* Note: Please see exercise_2.11 -folder for additional information/answers.
 
 <p>For this exercise I coded simpleProgramp.py with python. The program asks one's name information and age and prints them out. The program is CMD-based. I first containerized the program with Dockerfile, and then automated the process of running the program with docker-compose.yml.</p>
 
-<h2>Instructions</h2>
+## Instructions
 
 1) First clone the folder 2.11 to your local machine.
 2) You must have Python3 installed so you can execute the simpleProgram.py
 3) In linux, run the following: <b>docker build ./ -t pythonproject && docker run -ti pythonproject</b>
 4) To run the program with docker-compose in interactive shell, run: <b>docker-compose run --rm pythonproject</b>
 
-
-* Please see exercise_2.11 -folder for additional information/answers.
