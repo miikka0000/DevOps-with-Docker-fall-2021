@@ -38,7 +38,7 @@
 
 * Optimized container size (under 25 MB):
 
-![Screenshot](backendImageSize_ex3.6.PNG)
+![Screenshot](./exercise_3.6_backend/backendImageSize_ex3.6.PNG)
 
 ## Exercise 3.7
 
