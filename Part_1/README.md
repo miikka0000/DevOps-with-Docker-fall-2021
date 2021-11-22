@@ -128,7 +128,7 @@
 
 * Link to my HEROKU-app: https://exampleappmiikka.herokuapp.com/
 
-* Please see exercise_1.14 -folder for additional information/answers.
+* Please see exercise_1.16 -folder for additional information/answers.
 
 
 

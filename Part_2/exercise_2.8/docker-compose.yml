@@ -44,7 +44,6 @@ services:
                 
                 POSTGRES_PASSWORD: user1234
 
-                
         redis:
             image: redis
             restart: unless-stopped

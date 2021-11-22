@@ -1,4 +1,4 @@
-# Docker-compose.yml file                                                              
+# Docker-compose.yml file for exercise 2.10                                                           
 version: '3'
 
 services:

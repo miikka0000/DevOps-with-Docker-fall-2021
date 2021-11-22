@@ -35,7 +35,6 @@ services:
                 - images:/src/imgs
                 - data:/src/data
 
-
 volumes:
     model:
     images:

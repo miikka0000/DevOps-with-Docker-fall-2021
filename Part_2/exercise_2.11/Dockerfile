@@ -4,6 +4,6 @@ FROM python:3
 
 WORKDIR /mydir
 
-COPY . . .
+COPY . .
 
 CMD [ "python", "simpleProject.py" ]
