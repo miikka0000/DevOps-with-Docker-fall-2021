@@ -44,7 +44,7 @@ SECRET MESSAGE: "This is the secret message"
 
 1.7: Two line Dockerfile
 
-# My Docker file for the exercise 1.7: Two line Dockerfile. Done by Miikka Mensio
+# My Docker file for the exercise 1.7: Two line Dockerfile.
 
 FROM devopsdockeruh/simple-web-service:alpine
 CMD server
