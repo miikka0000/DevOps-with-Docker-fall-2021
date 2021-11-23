@@ -50,5 +50,7 @@
 
 ### Answers:
 
+![Screenshot](./exercise_3.8/3.8_Kubernetes_architecture_demo.png)
+
 * Please see exercise_3.8 -folder for additional information/answers.
 
