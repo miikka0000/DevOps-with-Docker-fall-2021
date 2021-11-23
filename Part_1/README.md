@@ -68,6 +68,8 @@
 
 ### Answers:
 
+* Command used: <b>docker run web-server</b>
+
 * Please see exercise_1.7 -folder for additional information/answers.
 
 ## 1.8: Image for script

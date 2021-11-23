@@ -36,7 +36,7 @@
 
 * Please see exercise_3.6_backend -folder for additional information/answers.
 
-* Optimized container size (under 25 MB):
+* Optimized container size (requirement was below 25 MB):
 
 ![Screenshot](./exercise_3.6_backend/backendImageSize_ex3.6.PNG)
 
